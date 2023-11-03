@@ -117,7 +117,6 @@ class Misc(commands.Cog):
         )
 
         embed.add_field(name='Question', value=text)
-        embed.set_footer(text=self.footer)
         embed.set_thumbnail(url=thumbnail)
         embed.add_field(name="Answer", value=f"{emote} {answer}", inline=False)
         await ctx.send(embed=embed)
