@@ -87,7 +87,7 @@ class Misc(commands.Cog):
     @checks.has_permissions(PermissionLevel.REGULAR)
     @commands.command(aliases=['8ball', 'ball'])
     async def magic8ball(self, ctx: commands.Context, *, text: str):
-        """Ask the magic Seele~"""
+        """Ask the wise Ruan Mei~"""
 
         num = random.randint(0, 9)
 
