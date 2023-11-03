@@ -14,6 +14,9 @@ from core.models import PermissionLevel
 # ?magic8ball
 
 DIR = dirname(__file__)
+HETERO_ROLE = 1158884021460291594
+BI_ROLE = 1158883963817971822
+GAY_ROLE = 1158883765070856202
 GAY_STICKERS = [
     "https://media.discordapp.net/attachments/1106785083379171372/1157133462331985961/20230928_174023.png?ex=65178003&is=65162e83&hm=dc1d01d630f54b13f7bea3dc29be717a279dd46929041dd34745880963379621&",
     "https://media.discordapp.net/attachments/1106785083379171372/1156858924838965268/Untitled570_20230928144333.png?ex=65168055&is=65152ed5&hm=257aeb2eb1d4596009f0ef092adf2e8573242cfae51116e0685545bfa322b87d&=&width=703&height=655",
@@ -46,7 +49,6 @@ class Misc(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
-        self.footer = ""  # TODO: REPLACE ME
 
     # Gaydar
     @checks.has_permissions(PermissionLevel.REGULAR)
@@ -68,8 +70,16 @@ class Misc(commands.Cog):
         # funi footer if anyone gets either
         if num == 0:
             embed.set_footer(text=f'[{member.display_name} is now a Certified Hetero]')
+            role = discord.utils.get(ctx.guild.roles, id=HETERO_ROLE)
+            await member.add_roles(role)
+        elif num == 50:
+            embed.set_footer(text=f'[{member.display_name} is now a Certified Bi]')
+            role = discord.utils.get(ctx.guild.roles, id=BI_ROLE)
+            await member.add_roles(role)
         elif num == 100:
             embed.set_footer(text=f'[{member.display_name} is now a Certified Gay]')
+            role = discord.utils.get(ctx.guild.roles, id=GAY_ROLE)
+            await member.add_roles(role)
             
         await ctx.send(embed=embed)
 
