@@ -2,13 +2,13 @@
 
 # Plugin Installation
 ```
-?plugin add jej-v/mm-plugins/<plugin name>
+?plugin add jej-v/ruan-mei-plugins/<plugin name>
 ```
 # Update
 ```
-?plugin update jej-v/mm-plugins/<plugin name>
+?plugin update jej-v/ruan-mei-plugins/<plugin name>
 ```
 # Remove
 ```
-?plugin remove jej-v/mm-plugins/<plugin name>
+?plugin remove jej-v/ruan-mei-plugins/<plugin name>
 ```
