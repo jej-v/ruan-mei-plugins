@@ -12,8 +12,8 @@ from discord.ext import commands
 from pebble import concurrent
 
 VERSION = "2.1.1"
-COUNTING_CHANNEL = 1162804188800102501
-DEVELOPER_ROLE = 1087928500893265991
+COUNTING_CHANNEL = 1230838057759150080
+DEVELOPER_ROLE = 1117348252417798214
 EVALUATION_TIMEOUT = 2  # Time in seconds after which to timeout
 DUPLICATE_GRACE = 1  # Time in seconds to be lenient to duplicate messages
 CODE_BLOCK_REGEX = re.compile(
