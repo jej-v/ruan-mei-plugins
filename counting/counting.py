@@ -415,7 +415,7 @@ class Counting(commands.Cog):
     async def counting_on_message(self, message: discord.Message):
         """on_message event handler to allow for detection and handling of counting messages"""
         if (
-            not message.author or not message.author.guild or message.author.bot
+            not message.author or not getattr(message.author, "guild", None) or message.author.bot
         ):  # Irrelevant
             return
         if message.channel.id != COUNTING_CHANNEL:  # Not the counting channel
